@@ -14,6 +14,8 @@
       --primary-hover: #023e8a;
       --whatsapp: #25d366;
       --whatsapp-hover: #1ebc57;
+      --call-btn: #16a34a;
+      --call-btn-hover: #15803d;
       --text-dark: #1e293b;
       --text-muted: #64748b;
       --bg-light: #f0f7ff;
@@ -148,6 +150,15 @@
       background-color: var(--whatsapp-hover);
     }
 
+    .btn-call {
+      background-color: var(--call-btn);
+      color: #ffffff;
+    }
+
+    .btn-call:hover {
+      background-color: var(--call-btn-hover);
+    }
+
     .hero-img-container {
       width: 100%;
       height: 320px;
@@ -212,7 +223,10 @@
       border-radius: 12px;
       overflow: hidden;
       margin-bottom: 1.2rem;
-      background-color: #f1f5f9;
+      background-color: #f8fafc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .card-img-wrapper img {
@@ -220,6 +234,12 @@
       height: 100%;
       object-fit: cover;
       display: block;
+    }
+
+    /* Container for isolated PNG appliance views */
+    .card-img-wrapper.contain-fit img {
+      object-fit: contain;
+      padding: 10px;
     }
 
     .card h3 {
@@ -277,6 +297,9 @@
       border-radius: var(--radius);
       border: 1px solid #e2e8f0;
       text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .contact-card h4 {
@@ -295,7 +318,7 @@
       margin-bottom: 1rem;
     }
 
-    .contact-card a {
+    .contact-card a.link {
       color: var(--primary);
       text-decoration: none;
       font-weight: 600;
@@ -356,7 +379,6 @@
       </div>
     </div>
     <div class="hero-img-container">
-      <!-- Top Showroom Image -->
       <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=80" alt="Afiya Enterprises Home Appliances Showroom" />
     </div>
   </section>
@@ -393,17 +415,17 @@
           <img src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=600&q=80" alt="Televisions" />
         </div>
         <h3>Televisions</h3>
-        <p>Explore televisions for your entertainment.</p>
+        <p>Explore smart 4K televisions for your entertainment.</p>
         <a href="https://wa.me/919360783384?text=Hi%20Afiya%20Enterprises,%20I'm%20interested%20in%20Televisions" target="_blank" class="btn btn-primary">Enquire</a>
       </div>
 
-      <!-- Air Conditioner -->
+      <!-- Air Conditioners (Updated with Split AC image) -->
       <div class="card">
-        <div class="card-img-wrapper">
-          <img src="https://images.unsplash.com/photo-1625961332771-3f40b0e2bdcf?auto=format&fit=crop&w=600&q=80" alt="Air Conditioners" />
+        <div class="card-img-wrapper contain-fit">
+          <img src="images/ac.png" onerror="this.onerror=null; this.src='https://tiimg.tistatic.com/fp/1/006/511/portable-split-air-conditioner-515.jpg';" alt="Air Conditioners" />
         </div>
         <h3>Air Conditioners</h3>
-        <p>Stay cool with energy-efficient air conditioners.</p>
+        <p>Stay cool with energy-efficient split & inverter air conditioners.</p>
         <a href="https://wa.me/919360783384?text=Hi%20Afiya%20Enterprises,%20I'm%20interested%20in%20Air%20Conditioners" target="_blank" class="btn btn-primary">Enquire</a>
       </div>
 
@@ -432,8 +454,8 @@
   <!-- About Section -->
   <section class="about" id="about">
     <h2 class="section-title">About Afiya Enterprises</h2>
-    <p>Welcome to Afiya Enterprises, your home appliances destination in Pattabiram, Tamil Nadu. We help customers explore quality home appliances tailored for everyday living[span_0](start_span)[span_0](end_span).</p>
-    <p>Visit our showroom to enquire about refrigerators, washing machines, televisions, air conditioners, mixer grinders, and kitchen appliances[span_1](start_span)[span_1](end_span).</p>
+    <p>Welcome to Afiya Enterprises, your home appliances destination in Pattabiram, Tamil Nadu. We help customers explore quality home appliances tailored for everyday living.</p>
+    <p>Visit our showroom to enquire about refrigerators, washing machines, televisions, air conditioners, mixer grinders, and kitchen appliances.</p>
   </section>
 
   <!-- Contact & Address Section -->
@@ -444,38 +466,44 @@
     <div class="contact-grid">
       <!-- Store Address -->
       <div class="contact-card">
-        <h4>📍 Showroom Address</h4>
-        <p>
-          <strong>Afiya Enterprises</strong><br />
-          7th Bharathi Nagar Road,<br />
-          Bharathi Nagar, PTMS,<br />
-          Pattabiram, Tamil Nadu - 600055
-        </p>
-        <a href="https://www.google.com/maps/search/?api=1&query=7th+Bharathi+Nagar+Rd+Bharathi+Nagar+PTMS+Pattabiram+Tamil+Nadu+600055" target="_blank">Open in Google Maps &rarr;</a>
+        <div>
+          <h4>📍 Showroom Address</h4>
+          <p>
+            <strong>Afiya Enterprises</strong><br />
+            7th Bharathi Nagar Road,<br />
+            Bharathi Nagar, PTMS,<br />
+            Pattabiram, Tamil Nadu - 600055
+          </p>
+        </div>
+        <a class="link" href="https://www.google.com/maps/search/?api=1&query=7th+Bharathi+Nagar+Rd+Bharathi+Nagar+PTMS+Pattabiram+Tamil+Nadu+600055" target="_blank">Open in Google Maps &rarr;</a>
       </div>
 
-      <!-- Phone Number -->
+      <!-- Phone Number (Green Call Button) -->
       <div class="contact-card">
-        <h4>📞 Phone Contact</h4>
-        <p>
-          Call us directly for showroom assistance and order inquiries.
-        </p>
-        <p>
-          <strong>Phone:</strong> <a href="tel:+919003254461">+91 90032 54461</a>
-        </p>
-        <a href="tel:+919003254461" class="btn btn-primary" style="margin-top: 0.5rem; font-size: 0.85rem; padding: 0.55rem 1.2rem;">Call Now</a>
+        <div>
+          <h4>📞 Phone Contact</h4>
+          <p>
+            Call us directly for showroom assistance, order booking, and immediate queries.
+          </p>
+          <p>
+            <strong>Phone:</strong> <a class="link" href="tel:+919003254461">+91 90032 54461</a>
+          </p>
+        </div>
+        <a href="tel:+919003254461" class="btn btn-call" style="margin-top: 1rem; width: 100%;">Call</a>
       </div>
 
       <!-- WhatsApp Enquiry -->
       <div class="contact-card">
-        <h4>💬 WhatsApp & Messages</h4>
-        <p>
-          Send a quick message to get instant product availability, quotes, and photos.
-        </p>
-        <p>
-          <strong>WhatsApp:</strong> <a href="https://wa.me/919360783384" target="_blank">+91 93607 83384</a>
-        </p>
-        <a href="https://wa.me/919360783384?text=Hi%20Afiya%20Enterprises,%20I%20have%20an%20enquiry" target="_blank" class="btn btn-whatsapp" style="margin-top: 0.5rem; font-size: 0.85rem; padding: 0.55rem 1.2rem;">Enquire on WhatsApp</a>
+        <div>
+          <h4>💬 WhatsApp & Messages</h4>
+          <p>
+            Send a quick message to get instant product availability, quotes, and photos.
+          </p>
+          <p>
+            <strong>WhatsApp:</strong> <a class="link" href="https://wa.me/919360783384" target="_blank">+91 93607 83384</a>
+          </p>
+        </div>
+        <a href="https://wa.me/919360783384?text=Hi%20Afiya%20Enterprises,%20I%20have%20an%20enquiry" target="_blank" class="btn btn-whatsapp" style="margin-top: 1rem; width: 100%;">Enquire on WhatsApp</a>
       </div>
     </div>
   </section>
