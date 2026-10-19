@@ -85,14 +85,29 @@
 
     /* Hero Section */
     .hero {
-      background-color: var(--bg-light);
-      padding: 3rem 5%;
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      align-items: center;
-      gap: 2.5rem;
-    }
+      <section class="hero-section">
+  <!-- Left Content -->
+  <div class="hero-content">
+    <h1>Make Your Home<br>More Comfortable!</h1>
+    <p class="subtitle">Explore Home Appliances at Afya Enterprises.</p>
+    <p class="tagline">Quality Products | Trusted Service | Great Choices</p>
 
+    <div class="hero-buttons">
+      <a href="#products" class="btn btn-primary">Explore Products</a>
+      <a href="https://wa.me/YOUR_PHONE_NUMBER" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
+    </div>
+  </div>
+
+  <!-- Right Image Box -->
+  <div class="hero-image-wrapper">
+    <img 
+      src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1000&q=80" 
+      alt="Afya Enterprises Home Appliances" 
+      class="hero-img"
+    />
+  </div>
+</section>
+      
     .hero h1 {
       font-size: 2.3rem;
       font-weight: 800;
