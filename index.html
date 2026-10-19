@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Afiya Enterprises | Home Appliances</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f2faff;
+    color: #17466d;
+    line-height: 1.6;
+}
+
+header {
+    background: white;
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    box-shadow: 0 2px 12px #d7eaf5;
+}
+
+.logo h1 {
+    color: #087bbd;
+    font-size: 27px;
+}
+
+.logo p {
+    color: #526d80;
+    font-size: 14px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #17466d;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #078bd0;
+}
+
+.hero {
+    background: linear-gradient(120deg, #d8f1ff, #ffffff);
+    padding: 45px 6%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 30px;
+}
+
+.hero h2 {
+    font-size: clamp(28px, 4vw, 43px);
+    line-height: 1.2;
+    color: #07568e;
+    margin-bottom: 18px;
+}
+
+.hero p {
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+
+.hero img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 5px 18px #c8dfed;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    background: #078bd0;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 25px;
+    margin: 8px 6px 0 0;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #075b99;
+}
+
+.whatsapp {
+    background: #159b57;
+}
+
+.whatsapp:hover {
+    background: #08783e;
+}
+
+section {
+    padding: 45px 6%;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 32px;
+    color: #075b99;
+    margin-bottom: 8px;
+}
+
+.section-description {
+    margin-bottom: 28px;
+    color: #526d80;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.card {
+    background: white;
+    padding: 16px;
+    border-radius: 15px;
+    border: 1px solid #d8eaf5;
+    box-shadow: 0 4px 14px #dcebf4;
+    overflow: hidden;
+}
+
+.card img {
+    display: block;
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 10px;
+    background: #e3f4ff;
+}
+
+.card h3 {
+    color: #075b99;
+    font-size: 21px;
+    margin-top: 14px;
+}
+
+.card p {
+    margin: 8px 0;
+    color: #526d80;
+}
+
+.card .btn {
+    margin-top: 10px;
+}
+
+.about {
+    background: white;
+}
+
+.about p {
+    max-width: 850px;
+    margin: 15px auto;
+    font-size: 17px;
+}
+
+.visit {
+    background: #e0f3ff;
+}
+
+.contact-details {
+    max-width: 750px;
+    margin: 25px auto 0;
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px #cfe5f3;
+}
+
+.contact-details p {
+    margin: 12px 0;
+    overflow-wrap: anywhere;
+}
+
+.contact-details a:not(.btn) {
+    color: #087bbd;
+    font-weight: bold;
+}
+
+footer {
+    background: #12466e;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+footer p {
+    margin-top: 5px;
+}
+
+@media (max-width: 750px) {
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 35px 5%;
+    }
+
+    .hero img {
+        height: 230px;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .card {
+        padding: 10px;
+    }
+
+    .card img {
+        height: 135px;
+    }
+
+    .card h3 {
+        font-size: 17px;
+    }
+
+    .card p {
+        font-size: 14px;
+    }
+
+    section {
+        padding: 35px 4%;
+    }
+
+    .section-title {
+        font-size: 27px;
+    }
+}
+
+@media (max-width: 380px) {
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .card img {
+        height: 210px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <h1>🏠 Afiya Enterprises</h1>
+        <p>Your Home Appliances Store</p>
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- HOME SECTION -->
+<div class="hero" id="home">
+    <div>
+        <h2>Make Your Home More Comfortable!</h2>
+
+        <p>Explore Home Appliances at Afiya Enterprises.</p>
+
+        <p>Quality Products | Trusted Service | Great Choices</p>
+
+        <a class="btn" href="#products">Explore Products</a>
+
+        <a class="btn whatsapp"
+           href="https://wa.me/919360783384"
+           target="_blank"
+           rel="noopener">
+           WhatsApp Us
+        </a>
+    </div>
+
+    <img
+        src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85"
+        alt="Afiya Enterprises home appliances showroom">
+</div>
+
+<!-- PRODUCTS SECTION -->
+<section id="products">
+    <h2 class="section-title">Our Products</h2>
+
+    <p class="section-description">
+        Explore our home appliances. Contact us for prices and availability.
+    </p>
+
+    <div class="products">
+
+        <!-- REFRIGERATOR -->
+        <div class="card">
+            <img
+                src="https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?auto=format&fit=crop&w=800&q=85"
+                alt="Refrigerator">
+            <h3>Refrigerators</h3>
+            <p>Explore refrigerators for your home.</p>
+            <a class="btn"
+               href="https://wa.me/919360783384?text=Hello%20Afiya%20Enterprises%2C%20I%20am%20interested%20in%20refrigerators."
+               target="_blank" rel="noopener">Enquire</a>
+        </div>
+
+        <!-- WASHING MACHINE -->
+        <div class="card">
+            <img
+                src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?auto=format&fit=crop&w=800&q=85"
+                alt="Washing machine">
+            <h3>Washing Machines</h3>
+            <p>Find the right washing machine for your home.</p>
+            <a class="btn"
+               href="https://wa.me/919360783384?text=Hello%20Afiya%20Enterprises%2C%20I%20am%20interested%20in%20washing%20machines."
+               target="_blank" rel="noopener">Enquire</a>
+        </div>
+
+        <!-- TELEVISION -->
+        <div class="card">
+            <img
+                src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=800&q=85"
+                alt="40-inch television">
+            <h3>40-Inch Televisions</h3>
+            <p>Ask us about available TV models.</p>
+            <a class="btn"
+               href="https://wa.me/919360783384?text=Hello%20Afiya%20Enterprises%2C%20I%20am%20interested%20in%2040-inch%20televisions."
+               target="_blank" rel="noopener">Enquire</a>
+        </div>
+
+        <!-- AIR CONDITIONER -->
+        <div class="card">
+            <img
+                src="https://images.unsplash.com/photo-1631545806609-6f7a5c2e9b15?auto=format&fit=crop&w=800&q=85"
+                alt="Air conditioner">
+            <h3>Air Conditioners</h3>
+            <p>Explore air conditioners for your home.</p>
+            <a class="btn"
+               href="https://wa.me/919360783384?text=Hello%20Afiya%20Enterprises%2C%20I%20am%20interested%20in%20air%20conditioners."
+               target="_blank" rel="noopener">Enquire</a>
+        </div>
+
+        <!-- MIXER GRINDER -->
+        <div class="card">
+            <img
+                src="https://images.unsplash.com/photo-1570222094114-d054a817e56b?auto=format&fit=crop&w=800&q=85"
+                alt="Mixer grinder and kitchen blender">
+            <h3>Mixer Grinders</h3>
+            <p>Useful appliances for everyday cooking.</p>
+            <a class="btn"
+               href="https://wa.me/919360783384?text=Hello%20Afiya%20Enterprises%2C%20I%20am%20interested%20in%20mixer%20grinders."
+               target="_blank" rel="noopener">Enquire</a>
+        </div>
+
+        <!-- KITCHEN APPLIANCES -->
+        <div class="card">
+            <img
+                src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=85"
+                alt="Modern kitchen and kitchen appliances">
+            <h3>Kitchen Appliances</h3>
+            <p>Explore useful kitchen appliances.</p>
+            <a class="btn"
+               href="https://wa.me/919360783384?text=Hello%20Afiya%20Enterprises%2C%20I%20am%20interested%20in%20kitchen%20appliances."
+               target="_blank" rel="noopener">Enquire</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- ABOUT US -->
+<section class="about" id="about">
+    <h2 class="section-title">About Afiya Enterprises</h2>
+
+    <p>
+        Welcome to Afiya Enterprises, your home appliances store in Pattabiram,
+        Tamil Nadu. We help customers explore appliances for their everyday
+        household needs.
+    </p>
+
+    <p>
+        From refrigerators and washing machines to televisions, air conditioners,
+        mixer grinders and kitchen appliances, contact us to know more about
+        available products and prices.
+    </p>
+
+    <a class="btn"
+       href="https://www.google.com/maps/search/?api=1&query=7th+Bharathi+Nagar+Road%2C+Bharathi+Nagar%2C+PTMS%2C+Pattabiram%2C+Tamil+Nadu+600055"
+       target="_blank" rel="noopener">
+       Visit Our Showroom
+    </a>
+</section>
+
+<!-- CONTACT -->
+<section class="visit" id="contact">
+    <h2 class="section-title">Visit Our Showroom</h2>
+
+    <p>We welcome you to Afiya Enterprises!</p>
+
+    <div class="contact-details">
+
+        <h3>📍 Shop Address</h3>
+
+        <p>
+            <a
+                href="https://www.google.com/maps/search/?api=1&query=7th+Bharathi+Nagar+Road%2C+Bharathi+Nagar%2C+PTMS%2C+Pattabiram%2C+Tamil+Nadu+600055"
+                target="_blank" rel="noopener">
+                7th Bharathi Nagar Road,<br>
+                Bharathi Nagar, PTMS,<br>
+                Pattabiram, Tamil Nadu - 600055
+            </a>
+        </p>
+
+        <a class="btn"
+           href="https://www.google.com/maps/search/?api=1&query=7th+Bharathi+Nagar+Road%2C+Bharathi+Nagar%2C+PTMS%2C+Pattabiram%2C+Tamil+Nadu+600055"
+           target="_blank" rel="noopener">
+           Open Google Maps
+        </a>
+
+        <hr style="margin: 22px 0; border: 0; border-top: 1px solid #d8eaf5;">
+
+        <h3>📞 Contact Us</h3>
+
+        <p>
+            Phone:
+            <a href="tel:9003254461">9003254461</a>
+        </p>
+
+        <a class="btn" href="tel:9003254461">Call Now</a>
+
+        <p style="margin-top: 20px;">
+            WhatsApp: 9360783384
+        </p>
+
+        <a class="btn whatsapp"
+           href="https://wa.me/919360783384"
+           target="_blank" rel="noopener">
+           Chat on WhatsApp
+        </a>
+
+    </div>
+</section>
+
+<footer>
+    <h2>Afiya Enterprises</h2>
+    <p>Your Home Appliances Store | Pattabiram, Tamil Nadu</p>
+    <p>© 2026 Afiya Enterprises. All rights reserved.</p>
+</footer>
+
+</body>
+  </html>
